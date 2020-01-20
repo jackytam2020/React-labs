@@ -1,0 +1,20 @@
+$fz:20px;
+$m:10px;
+
+.menu_items {
+    background-color: #DDD;
+    padding: 10px;
+    margin: 10px 0;
+
+    &:active, &:hover {
+        background-color: #999;
+    }
+
+    &:first-of-type {
+        margin-top: $m*2;
+    }
+
+    &:last-of-type {
+        margin-bottom: $m*2;
+    }
+}

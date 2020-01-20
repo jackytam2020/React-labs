@@ -1,0 +1,17 @@
+@import './MenuItem/mItems.scss';
+
+$w:300px;
+@mixin flex($dir:column){
+    display: flex;
+    flex-direction: $dir;
+}
+
+.menu {
+    widows: $w;
+    @include flex();
+    background-color:#dab;
+
+    h1 {
+        font-size:$fz*1.5;
+    }
+}
