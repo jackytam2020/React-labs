@@ -10,14 +10,22 @@ export default {
 
 var items = [
     {
-        name:"item 1"
+        itemTitle:"Profile",
+        onClick:()=>{alert("go to profile!")}
     },
     {
-        name:"item 2"
+        itemTitle:"Settings",
+        onClick:()=>{alert("go to stats!")}
     },
     {
-        name:"item 3"
-    }
+        itemTitle:"Stats"
+    },
+    {
+        itemTitle:"Dashboard"
+    },
+    {
+        itemTitle:"Log Out"
+    },
 ]
 
 export const DefaultMenu = () => {
@@ -29,7 +37,7 @@ export const DefaultMenu = () => {
 
 export const DropDownMenu = () => {
     return <Menu 
-            dropdown={false}
+            dropdown={true}
             items={items}
             />
 }
@@ -39,4 +47,20 @@ export const SlideDownMenu = () => {
             slide="left"
             items={items}
             />
+}
+export const MenuWithMyTags = () => {
+    return <Menu>
+        <div> My Custom Tag </div>
+        <img src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12234558/Chinook-On-White-03.jpg"></img>
+        </Menu> 
+}
+export const MenuWithTitle = () => {
+    return <Menu 
+            menuTitle="My Menu"
+            />
+}
+export const CustomItemsMenu = () => {
+    return <Menu 
+        items={items}
+    />
 }

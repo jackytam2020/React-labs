@@ -14,4 +14,17 @@ $w:300px;
     h1 {
         font-size:$fz*1.5;
     }
+
+    & img {
+        width: 50%;
+    }
+
+    .dropmenu{
+        max-height: 0;
+        transition: max-height 0.3s;
+        overflow: hidden;
+    }
+    .dropmenu_active {
+        max-height: 100vh;
+    }
 }
