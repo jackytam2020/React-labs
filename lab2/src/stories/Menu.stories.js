@@ -1,11 +1,13 @@
 import React from 'react';
 import '../App.scss';
+import {withKnobs, text} from '@storybook/addon-knobs'
 
 import Menu from '../comps/menu';
 
 export default {
     title:"Menus",
-    component:Menu
+    component:Menu,
+    decorators:[withKnobs]
 }
 
 var items = [
@@ -30,8 +32,7 @@ var items = [
 
 export const DefaultMenu = () => {
     return <Menu 
-            title="My Menu"
-            items={items}
+            menuTitle={text("Default Title")}
             />
 }
 
