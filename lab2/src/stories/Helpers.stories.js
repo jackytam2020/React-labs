@@ -2,6 +2,7 @@ import React from 'react'
 
 import {withKnobs, boolean,text, select} from "@storybook/addon-knobs"
 import Helper from '../comps/Helpers';
+import Stripe from '../comps/Stripe';
 
 export default {
     title:"Helper",
@@ -21,4 +22,8 @@ export const DefaultHelper = () => {
             helpText={text("Error")}
             position={select("Positions",options)}
     />
+}
+
+export const StripeForm = () =>{
+    return <Stripe />
 }
